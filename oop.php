@@ -19,6 +19,11 @@ $obj->printhtmlEntities($myUrl);
 $myVar = "Force is defined as &#039;F &#061;ma&#039;";
 $obj->printHtmlDecode($myVar);
 
+$myStr = " Welcome to php tutorial";
+$obj->printLeftTrim($myStr);
+
+$obj->printRightTrim($myStr);
+
 class main {
 	public function __construct() {
 		echo 'Hello, i\'m an Object </br>';
@@ -59,6 +64,19 @@ public function printhtmlEntities($myUrl)
 public function printHtmlDecode($myVar)
 {     echo '<h1> String html_entity_decode function</h1>';
       echo html_entity_decode($myVar, ENT_QUOTES);
+      echo '<hr>';
+}
+
+public function printLeftTrim($myStr)
+{     echo '<h1> String Left Trim(ltrim) function</h1>';
+      echo ltrim($myStr," Welcome to ");
+      echo '<hr>';
+}
+
+
+public function printRightTrim($myStr)
+{     echo '<h1> String Right Trim(rtrim) function</h1>';
+      echo rtrim($myStr," php tutorial");
       echo '<hr>';
 }
 
