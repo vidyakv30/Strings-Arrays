@@ -29,6 +29,9 @@ $obj->printStrLen($myWord);
 
 $obj->printStrPos($myWord);
 
+$myMsg ="Welcome to WSD class";
+$obj->printStrReplace($myMsg);
+
 class main {
 	public function __construct() {
 		echo 'Hello, i\'m an Object </br>';
@@ -100,6 +103,11 @@ public function printStrPos($myWord)
       echo '<hr>';
 }
 
+public function printStrReplace($myMsg)
+{     echo '<h1> Print substring replace function</h1>';
+      print substr_replace($myMsg, "IS601" ,11);
+      echo '<hr>';
+}
 
 
 
