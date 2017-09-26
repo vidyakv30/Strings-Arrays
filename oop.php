@@ -7,6 +7,11 @@ $obj->printchr($str);
 $text = "Welcome to IS601";
 $obj->printecho($text);
 
+$txt ="Good morning. How are you";
+$obj->printexplode($txt);
+
+$strArray ="A beautiful day";
+$obj->printcount($strArray);
 
 class main {
 	public function __construct() {
@@ -26,6 +31,18 @@ public function printecho($text) {
       echo "$text";
       echo '<hr>';
     }
+
+public function printexplode  ($txt) {
+      echo '<h1> String explode function </h1>';
+      print_r (explode(" ",$txt));
+      echo '<hr>';
+    }
+
+public function printcount($strArray)
+{     echo '<h1> String Count char function</h1>';
+      print_r (count_chars($strArray,1));
+      echo '<hr>';
+}
 
 
 
