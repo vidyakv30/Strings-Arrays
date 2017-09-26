@@ -16,6 +16,9 @@ $obj->printcount($strArray);
 $myUrl ='<a href "https://web.njit.edu/~vk427/stringarray/oop.php">Go to this page</a>';
 $obj->printhtmlEntities($myUrl);
 
+$myVar = "Force is defined as &#039;F &#061;ma&#039;";
+$obj->printHtmlDecode($myVar);
+
 class main {
 	public function __construct() {
 		echo 'Hello, i\'m an Object </br>';
@@ -42,14 +45,20 @@ public function printexplode  ($txt) {
     }
 
 public function printcount($strArray)
-{     echo '<h1> String Count char function</h1>';
+{     echo '<h1> String count_char function</h1>';
       print_r (count_chars($strArray,1));
       echo '<hr>';
 }
 
 public function printhtmlEntities($myUrl)
-{     echo '<h1> String Html entities</h1>';
+{     echo '<h1> String html_entities function</h1>';
       print_r (htmlentities($myUrl));
+      echo '<hr>';
+}
+
+public function printHtmlDecode($myVar)
+{     echo '<h1> String html_entity_decode function</h1>';
+      echo html_entity_decode($myVar, ENT_QUOTES);
       echo '<hr>';
 }
 
