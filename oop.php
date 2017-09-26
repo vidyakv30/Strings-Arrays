@@ -24,6 +24,11 @@ $obj->printLeftTrim($myStr);
 
 $obj->printRightTrim($myStr);
 
+$myWord ='Welcome';
+$obj->printStrLen($myWord);
+
+$obj->printStrPos($myWord);
+
 class main {
 	public function __construct() {
 		echo 'Hello, i\'m an Object </br>';
@@ -31,54 +36,70 @@ class main {
 
 
  public function printchr($str) {
-      echo '<h1> String chr function </h1>';
+      echo '<h1> Print chr function </h1>';
       print($str);
       echo '<hr>';
     }
 
 
 public function printecho($text) {
-      echo '<h1> String echo function </h1>';
+      echo '<h1> Print echo function </h1>';
       echo "$text";
       echo '<hr>';
     }
 
 public function printexplode  ($txt) {
-      echo '<h1> String explode function </h1>';
+      echo '<h1> Print explode function </h1>';
       print_r (explode(" ",$txt));
       echo '<hr>';
     }
 
 public function printcount($strArray)
-{     echo '<h1> String count_char function</h1>';
+{     echo '<h1> Print count_char function</h1>';
       print_r (count_chars($strArray,1));
       echo '<hr>';
 }
 
 public function printhtmlEntities($myUrl)
-{     echo '<h1> String html_entities function</h1>';
+{     echo '<h1> Print html_entities function</h1>';
       print_r (htmlentities($myUrl));
       echo '<hr>';
 }
 
 public function printHtmlDecode($myVar)
-{     echo '<h1> String html_entity_decode function</h1>';
+{     echo '<h1> Print html_entity_decode function</h1>';
       echo html_entity_decode($myVar, ENT_QUOTES);
       echo '<hr>';
 }
 
 public function printLeftTrim($myStr)
-{     echo '<h1> String Left Trim(ltrim) function</h1>';
+{     echo '<h1> Print Left Trim(ltrim) function</h1>';
       echo ltrim($myStr," Welcome to ");
       echo '<hr>';
 }
 
 
 public function printRightTrim($myStr)
-{     echo '<h1> String Right Trim(rtrim) function</h1>';
+{     echo '<h1> Print Right Trim(rtrim) function</h1>';
       echo rtrim($myStr," php tutorial");
       echo '<hr>';
 }
+
+
+public function printStrLen($myWord)
+{     echo '<h1> Print strlen function</h1>';
+      print strlen($myWord);
+      echo '<hr>';
+}
+
+
+
+public function printStrPos($myWord)
+{     echo '<h1> Print string position function</h1>';
+      print strpos($myWord, 'l');
+      echo '<hr>';
+}
+
 
 
 
