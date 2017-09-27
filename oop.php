@@ -1,38 +1,25 @@
 <?php
 
 $obj = new main ();
+
 $str = "Strings ".chr(38) ." Arrays";
-$obj->printchr($str);
-
 $text = "Welcome to IS601";
-$obj->printecho($text);
-
-$txt ="Good morning. How are you";
-$obj->printexplode($txt);
-
-$strArray ="A beautiful day";
-$obj->printcount($strArray);
-
 $myUrl ='<a href "https://web.njit.edu/~vk427/stringarray/oop.php">Go to this page</a>';
-$obj->printhtmlEntities($myUrl);
-
 $myVar = "Force is defined as &#039;F &#061;ma&#039;";
+
+$obj->printchr($str);
+$obj->printecho($text);
+$obj->printexplode($text);
+$obj->printcount($text);
+$obj->printhtmlEntities($myUrl);
 $obj->printHtmlDecode($myVar);
+$obj->printLeftTrim($text);
+$obj->printRightTrim($text);
+$obj->printStrLen($text);
+$obj->printStrPos($text);
+$obj->printStrReplace($text);
 
-$myStr = " Welcome to php tutorial";
-$obj->printLeftTrim($myStr);
-
-$obj->printRightTrim($myStr);
-
-$myWord ='Welcome';
-$obj->printStrLen($myWord);
-
-$obj->printStrPos($myWord);
-
-$myMsg ="Welcome to WSD class";
-$obj->printStrReplace($myMsg);
-
-
+#************************************************Start of Array variables and methods******************************************************************************
 
 $color = array("red","green","blue","yellow");
 $fruit = array ("apple","avocado","berries","banana");
@@ -48,90 +35,89 @@ $obj->printArraySort($color);
 $obj->printList($color);
 $obj->printArrayCount($fruit);
 $obj->printArraySearch($fruit);
-
+#************************************************End of array variables and methods*******************************************************************************
+#************************************************Main program begins here*****************************************************************************************
 
 class main {
-	public function __construct() {
-		echo '<h2>String Functions</h2></br>';
-	}
+  	public function __construct() {
+  		    echo '<h2> String Functions</h2>';
+           	}
 
 
- public function printchr($str) {
-      echo '<h4> Print chr function </h4>';
-      print($str);
-      echo '<hr>';
+    public function printchr($str) {
+          echo '<h4> Print chr function </h4>';
+          print($str);
+          echo '<hr>';
     }
 
 
-public function printecho($text) {
-      echo '<h4> Print echo function </h4>';
-      echo "$text";
-      echo '<hr>';
+    public function printecho($text) {
+          echo '<h4> Print echo function </h4>';
+          echo "$text";
+          echo '<hr>';
     }
 
-public function printexplode  ($txt) {
-      echo '<h4> Print explode function </h4>';
-      print_r (explode(" ",$txt));
-      echo '<hr>';
+    public function printexplode($text) {
+          echo '<h4> Print explode function </h4>';
+          print_r (explode(" ",$text));
+          echo '<hr>';
     }
 
-public function printcount($strArray)
-{     echo '<h4> Print count_char function</h4>';
-      print_r (count_chars($strArray,1));
-      echo '<hr>';
-}
+    public function printcount($text)
+    {     echo '<h4> Print count_char function</h4>';
+          print_r (count_chars($text,1));
+          echo '<hr>';
+    }
 
-public function printhtmlEntities($myUrl)
-{     echo '<h4> Print html_entities function</h4>';
-      print_r (htmlentities($myUrl));
-      echo '<hr>';
-}
+    public function printhtmlEntities($myUrl)
+    {     echo '<h4> Print html_entities function</h4>';
+          print_r (htmlentities($myUrl));
+          echo '<hr>';
+    }
 
-public function printHtmlDecode($myVar)
-{     echo '<h4> Print html_entity_decode function</h4>';
-      echo html_entity_decode($myVar, ENT_QUOTES);
-      echo '<hr>';
-}
+    public function printHtmlDecode($myVar)
+    {     echo '<h4> Print html_entity_decode function</h4>';
+          echo html_entity_decode($myVar, ENT_QUOTES);
+          echo '<hr>';
+    }
 
-public function printLeftTrim($myStr)
-{     echo '<h4> Print Left Trim(ltrim) function</h4>';
-      echo ltrim($myStr," Welcome to ");
-      echo '<hr>';
-}
-
-
-public function printRightTrim($myStr)
-{     echo '<h4> Print Right Trim(rtrim) function</h4>';
-      echo rtrim($myStr," php tutorial");
-      echo '<hr>';
-}
+    public function printLeftTrim($text)
+    {     echo '<h4> Print Left Trim(ltrim) function</h4>';
+          echo ltrim($text,"Welcome to ");
+          echo '<hr>';
+    }
 
 
-public function printStrLen($myWord)
-{     echo '<h4> Print strlen function</h4>';
-      print strlen($myWord);
-      echo '<hr>';
-}
+    public function printRightTrim($text)
+    {     echo '<h4> Print Right Trim(rtrim) function</h4>';
+          echo rtrim($text," to IS601");
+          echo '<hr>';
+    }
+
+
+    public function printStrLen($text)
+    {     echo '<h4> Print strlen function</h4>';
+          print strlen($text);
+          echo '<hr>';
+    }
 
 
 
-public function printStrPos($myWord)
-{     echo '<h4> Print string position function</h4>';
-      print strpos($myWord, 'l');
-      echo '<hr>';
-}
+    public function printStrPos($text)
+    {     echo '<h4> Print string position function</h4>';
+          print strpos($text, 'l');
+          echo '<hr>';
+    }
 
-public function printStrReplace($myMsg)
-{     echo '<h4> Print substring replace function</h4>';
-      print substr_replace($myMsg, "IS601" ,11);
-      echo '<hr>';
-}
-
-
+    public function printStrReplace($text)
+    {     echo '<h4> Print substring replace function</h4>';
+          print substr_replace($text, "Web Systems Development" ,11);
+          echo '<hr>';
+    }
 #**********************************************************Array Functions*****************************************************************************************
 
     public function printArrayChunk($color){
-      echo '<h2>Array Functions</h2></br>';
+      echo '<h2>Array Functions</h2>';
       echo '<h4> Array chunk function</h4>';
       print_r (array_chunk($color,2));
       echo '<hr>';
